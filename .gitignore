@@ -1,0 +1,47 @@
+# ====================================================================
+# 1. COMPILER & BUILD OUTPUTS (Never commit binaries or object files)
+# ====================================================================
+*.o
+*.obj
+*.out
+*.elf
+*.bin
+*.hex
+*.map
+*.srec
+
+# Ignore whole build and output directories
+build/
+dist/
+bin/
+lib/
+obj/
+
+# ====================================================================
+# 2. PYTHON DEVELOPMENT (For configuration, data plotting, KML tools)
+# ====================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.vpy
+.pytest_cache/
+.venv/
+venv/
+ENV/
+
+# ====================================================================
+# 3. INTEGRATED DEVELOPMENT ENVIRONMENTS (IDE Local Workspace Settings)
+# ====================================================================
+# VS Code (Keeps your personal window layouts out of the repo)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# CLion / PyCharm / IntelliJ
+.idea/
+*.iws
+
+# System specific files (Mac/Windows background clutter)
+.DS_Store
+Thumbs.db
