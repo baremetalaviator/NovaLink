@@ -17,8 +17,30 @@ bin/
 lib/
 obj/
 
+# CMake-generated files (in case cmake ever runs outside build/)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
 # ====================================================================
-# 2. PYTHON DEVELOPMENT (For configuration, data plotting, KML tools)
+# 2. SECRETS & CREDENTIALS (Never commit these, under any circumstance)
+# ====================================================================
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+credentials.json
+secrets.json
+keys/
+secrets/
+.secrets/
+
+# ====================================================================
+# 3. PYTHON DEVELOPMENT (For configuration, data plotting, KML tools)
 # ====================================================================
 __pycache__/
 *.py[cod]
@@ -30,7 +52,7 @@ venv/
 ENV/
 
 # ====================================================================
-# 3. INTEGRATED DEVELOPMENT ENVIRONMENTS (IDE Local Workspace Settings)
+# 4. INTEGRATED DEVELOPMENT ENVIRONMENTS (IDE Local Workspace Settings)
 # ====================================================================
 # VS Code (Keeps your personal window layouts out of the repo)
 .vscode/*
