@@ -11,7 +11,7 @@
 *.srec
 
 # Ignore whole build and output directories
-build/
+build*/
 dist/
 bin/
 lib/
