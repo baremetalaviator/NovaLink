@@ -3,6 +3,15 @@ project(NovaLink C)
 
 add_executable(hello tests/host/hello.c)
 
+add_library(unity STATIC third_party/Unity/unity.c)
+target_include_directories(unity PUBLIC third_party/Unity)
+
+add_executable(unit_tests tests/host/test_example.c)
+target_link_libraries(unit_tests unity)
+
+enable_testing()
+add_test(NAME unit_tests COMMAND unit_tests)
+
 # Static analysis. Run with:  cmake --build . --target cppcheck
 # Only scans tests/ for now -- add more folders here (e.g. src) once
 # real protocol source exists outside tests/.

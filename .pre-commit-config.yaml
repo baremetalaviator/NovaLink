@@ -6,9 +6,11 @@ repos:
         entry: clang-format -i
         language: system
         files: \.(c|h)$
+        exclude: ^third_party/
 
       - id: cppcheck
         name: cppcheck
         entry: cppcheck --error-exitcode=1 --enable=warning,style,performance,portability --inline-suppr --suppress=missingIncludeSystem
         language: system
         files: \.(c|h)$
+        exclude: ^third_party/
